@@ -124,7 +124,6 @@
             50% { opacity: 0.5; transform: scale(0.8); }
         }
 
-        /* Epígrafe / Cita */
         .epigraph-section {
             padding: 56px 0 0;
             position: relative;
@@ -477,11 +476,11 @@
                 <i class="fa-solid fa-bars"></i>
             </button>
             <div class="nav-links flex items-center gap-8" id="navLinks">
-                <a href="#inicio" class="nav-link active" data-section="inicio">Inicio</a>
-                <a href="#sobre-mi" class="nav-link" data-section="sobre-mi">Sobre mí</a>
-                <a href="#actividades" class="nav-link" data-section="actividades">Actividades</a>
-                <a href="#trayecto" class="nav-link" data-section="trayecto">Trayecto</a>
-                <a href="#contacto" class="nav-link" data-section="contacto">Contacto</a>
+                <a href="#inicio" class="nav-link active" data-section="inicio">Pagina principal</a>
+                <a href="#primer-anio" class="nav-link" data-section="primer-anio">Primer año</a>
+                <a href="#segundo-anio" class="nav-link" data-section="segundo-anio">Segundo año</a>
+                <a href="#sobre-mi" class="nav-link" data-section="sobre-mi">Sobre mi</a>
+                <a href="#esim" class="nav-link" data-section="esim">ESIM ISFDyT</a>
             </div>
         </div>
     </nav>
@@ -500,7 +499,7 @@
             </div>
         </section>
 
-        <!-- HERO -->
+        <!-- HERO / PAGINA PRINCIPAL -->
         <section id="inicio" class="min-h-screen flex items-center pt-12">
             <div class="max-w-6xl mx-auto px-6 py-20 w-full">
                 <div class="grid lg:grid-cols-2 gap-12 items-center">
@@ -519,7 +518,7 @@
                             <button class="btn-primary" onclick="openModal()">
                                 <i class="fa-solid fa-plus"></i> Subir actividad
                             </button>
-                            <a href="#actividades" class="btn-secondary">
+                            <a href="#primer-anio" class="btn-secondary">
                                 <i class="fa-solid fa-grid-2"></i> Ver portfolio
                             </a>
                         </div>
@@ -575,100 +574,15 @@
             </div>
         </section>
 
-        <!-- SOBRE MÍ -->
-        <section id="sobre-mi" class="py-24">
-            <div class="max-w-6xl mx-auto px-6">
-                <div class="reveal">
-                    <div class="section-line mb-4"></div>
-                    <h2 class="section-title mb-3">Sobre mí</h2>
-                    <p class="section-subtitle mb-12">Perfil profesional y académico</p>
-                </div>
-                <div class="grid lg:grid-cols-3 gap-8">
-                    <div class="lg:col-span-2 reveal" style="transition-delay:0.1s">
-                        <div style="background:var(--card); border:1px solid var(--border); border-radius:20px; padding:32px;">
-                            <div class="flex items-start gap-5 mb-6">
-                                <div style="width:80px;height:80px;border-radius:16px;overflow:hidden;flex-shrink:0;border:2px solid var(--accent);">
-                                    <img src="https://picsum.photos/seed/profesor-tech/160/160.jpg" alt="Foto de perfil" style="width:100%;height:100%;object-fit:cover;">
-                                </div>
-                                <div>
-                                    <h3 class="font-display font-bold text-xl mb-1" id="profileName">Tu Nombre</h3>
-                                    <p style="color:var(--accent); font-size:0.9rem; font-weight:500;">Estudiante de Profesorado en Tecnologías</p>
-                                    <p style="color:var(--fg-muted); font-size:0.85rem; margin-top:4px;" id="profileInstitution">Instituto de Formación Docente</p>
-                                </div>
-                            </div>
-                            <p style="color:var(--fg-muted); line-height:1.8; font-size:0.95rem;" id="profileBio">
-                                Soy estudiante del Profesorado de Educación Secundaria en Tecnologías, con interés en la integración de herramientas digitales en el aula, la programación como recurso pedagógico y el enfoque maker en educación. Este portfolio reúne todas las actividades, producciones y reflexiones del trayecto formativo.
-                            </p>
-                            <button class="btn-secondary btn-sm mt-6" onclick="editProfile()" style="font-size:0.8rem;">
-                                <i class="fa-solid fa-pen"></i> Editar perfil
-                            </button>
-                        </div>
-                    </div>
-                    <div class="reveal" style="transition-delay:0.2s">
-                        <div style="background:var(--card); border:1px solid var(--border); border-radius:20px; padding:32px;">
-                            <h4 class="font-display font-semibold mb-5" style="font-size:1rem;">Competencias en desarrollo</h4>
-                            <div class="space-y-4" id="skillsList">
-                                <div>
-                                    <div class="flex justify-between mb-1">
-                                        <span style="font-size:0.85rem;">Programación</span>
-                                        <span style="font-size:0.8rem; color:var(--accent);">Avanzado</span>
-                                    </div>
-                                    <div style="height:6px; background:var(--border); border-radius:3px; overflow:hidden;">
-                                        <div style="width:80%; height:100%; background:var(--accent); border-radius:3px; transition:width 1s ease;"></div>
-                                    </div>
-                                </div>
-                                <div>
-                                    <div class="flex justify-between mb-1">
-                                        <span style="font-size:0.85rem;">Diseño gráfico</span>
-                                        <span style="font-size:0.8rem; color:var(--cat-diseno);">Intermedio</span>
-                                    </div>
-                                    <div style="height:6px; background:var(--border); border-radius:3px; overflow:hidden;">
-                                        <div style="width:60%; height:100%; background:var(--cat-diseno); border-radius:3px; transition:width 1s ease;"></div>
-                                    </div>
-                                </div>
-                                <div>
-                                    <div class="flex justify-between mb-1">
-                                        <span style="font-size:0.85rem;">Robótica / Electrónica</span>
-                                        <span style="font-size:0.8rem; color:var(--cat-robot);">Intermedio</span>
-                                    </div>
-                                    <div style="height:6px; background:var(--border); border-radius:3px; overflow:hidden;">
-                                        <div style="width:55%; height:100%; background:var(--cat-robot); border-radius:3px; transition:width 1s ease;"></div>
-                                    </div>
-                                </div>
-                                <div>
-                                    <div class="flex justify-between mb-1">
-                                        <span style="font-size:0.85rem;">Didáctica de la tecnología</span>
-                                        <span style="font-size:0.8rem; color:var(--cat-didac);">En desarrollo</span>
-                                    </div>
-                                    <div style="height:6px; background:var(--border); border-radius:3px; overflow:hidden;">
-                                        <div style="width:40%; height:100%; background:var(--cat-didac); border-radius:3px; transition:width 1s ease;"></div>
-                                    </div>
-                                </div>
-                                <div>
-                                    <div class="flex justify-between mb-1">
-                                        <span style="font-size:0.85rem;">Práctica docente</span>
-                                        <span style="font-size:0.8rem; color:var(--cat-prac);">En desarrollo</span>
-                                    </div>
-                                    <div style="height:6px; background:var(--border); border-radius:3px; overflow:hidden;">
-                                        <div style="width:30%; height:100%; background:var(--cat-prac); border-radius:3px; transition:width 1s ease;"></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- ACTIVIDADES -->
-        <section id="actividades" class="py-24" style="background: linear-gradient(180deg, transparent, rgba(45,212,168,0.02), transparent);">
+        <!-- PRIMER AÑO -->
+        <section id="primer-anio" class="py-24" style="background: linear-gradient(180deg, transparent, rgba(45,212,168,0.02), transparent);">
             <div class="max-w-6xl mx-auto px-6">
                 <div class="reveal">
                     <div class="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4 mb-8">
                         <div>
                             <div class="section-line mb-4"></div>
-                            <h2 class="section-title mb-3">Actividades</h2>
-                            <p class="section-subtitle">Producciones, trabajos prácticos y reflexiones del trayecto formativo</p>
+                            <h2 class="section-title mb-3">Primer año</h2>
+                            <p class="section-subtitle">Producciones, trabajos prácticos y reflexiones del primer año de formación</p>
                         </div>
                         <button class="btn-primary btn-sm" onclick="openModal()">
                             <i class="fa-solid fa-plus"></i> Nueva actividad
@@ -705,13 +619,13 @@
             </div>
         </section>
 
-        <!-- TRAYECTO FORMATIVO -->
-        <section id="trayecto" class="py-24">
+        <!-- SEGUNDO AÑO -->
+        <section id="segundo-anio" class="py-24">
             <div class="max-w-6xl mx-auto px-6">
                 <div class="reveal">
                     <div class="section-line mb-4"></div>
-                    <h2 class="section-title mb-3">Trayecto Formativo</h2>
-                    <p class="section-subtitle mb-12">Materias y espacios curriculares del profesorado</p>
+                    <h2 class="section-title mb-3">Segundo año</h2>
+                    <p class="section-subtitle mb-12">Materias y espacios curriculares del segundo año del profesorado</p>
                 </div>
                 <div class="grid lg:grid-cols-2 gap-12">
                     <div class="reveal" style="transition-delay:0.1s">
@@ -819,13 +733,98 @@
             </div>
         </section>
 
-        <!-- CONTACTO -->
-        <section id="contacto" class="py-24" style="background: linear-gradient(180deg, transparent, rgba(240,165,0,0.02), transparent);">
+        <!-- SOBRE MI -->
+        <section id="sobre-mi" class="py-24" style="background: linear-gradient(180deg, transparent, rgba(45,212,168,0.02), transparent);">
             <div class="max-w-6xl mx-auto px-6">
                 <div class="reveal">
                     <div class="section-line mb-4"></div>
-                    <h2 class="section-title mb-3">Contacto</h2>
-                    <p class="section-subtitle mb-12">Datos de contacto y redes profesionales</p>
+                    <h2 class="section-title mb-3">Sobre mi</h2>
+                    <p class="section-subtitle mb-12">Perfil profesional y académico</p>
+                </div>
+                <div class="grid lg:grid-cols-3 gap-8">
+                    <div class="lg:col-span-2 reveal" style="transition-delay:0.1s">
+                        <div style="background:var(--card); border:1px solid var(--border); border-radius:20px; padding:32px;">
+                            <div class="flex items-start gap-5 mb-6">
+                                <div style="width:80px;height:80px;border-radius:16px;overflow:hidden;flex-shrink:0;border:2px solid var(--accent);">
+                                    <img src="https://picsum.photos/seed/profesor-tech/160/160.jpg" alt="Foto de perfil" style="width:100%;height:100%;object-fit:cover;">
+                                </div>
+                                <div>
+                                    <h3 class="font-display font-bold text-xl mb-1" id="profileName">Tu Nombre</h3>
+                                    <p style="color:var(--accent); font-size:0.9rem; font-weight:500;">Estudiante de Profesorado en Tecnologías</p>
+                                    <p style="color:var(--fg-muted); font-size:0.85rem; margin-top:4px;" id="profileInstitution">Instituto de Formación Docente</p>
+                                </div>
+                            </div>
+                            <p style="color:var(--fg-muted); line-height:1.8; font-size:0.95rem;" id="profileBio">
+                                Soy estudiante del Profesorado de Educación Secundaria en Tecnologías, con interés en la integración de herramientas digitales en el aula, la programación como recurso pedagógico y el enfoque maker en educación. Este portfolio reúne todas las actividades, producciones y reflexiones del trayecto formativo.
+                            </p>
+                            <button class="btn-secondary btn-sm mt-6" onclick="editProfile()" style="font-size:0.8rem;">
+                                <i class="fa-solid fa-pen"></i> Editar perfil
+                            </button>
+                        </div>
+                    </div>
+                    <div class="reveal" style="transition-delay:0.2s">
+                        <div style="background:var(--card); border:1px solid var(--border); border-radius:20px; padding:32px;">
+                            <h4 class="font-display font-semibold mb-5" style="font-size:1rem;">Competencias en desarrollo</h4>
+                            <div class="space-y-4" id="skillsList">
+                                <div>
+                                    <div class="flex justify-between mb-1">
+                                        <span style="font-size:0.85rem;">Programación</span>
+                                        <span style="font-size:0.8rem; color:var(--accent);">Avanzado</span>
+                                    </div>
+                                    <div style="height:6px; background:var(--border); border-radius:3px; overflow:hidden;">
+                                        <div style="width:80%; height:100%; background:var(--accent); border-radius:3px; transition:width 1s ease;"></div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="flex justify-between mb-1">
+                                        <span style="font-size:0.85rem;">Diseño gráfico</span>
+                                        <span style="font-size:0.8rem; color:var(--cat-diseno);">Intermedio</span>
+                                    </div>
+                                    <div style="height:6px; background:var(--border); border-radius:3px; overflow:hidden;">
+                                        <div style="width:60%; height:100%; background:var(--cat-diseno); border-radius:3px; transition:width 1s ease;"></div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="flex justify-between mb-1">
+                                        <span style="font-size:0.85rem;">Robótica / Electrónica</span>
+                                        <span style="font-size:0.8rem; color:var(--cat-robot);">Intermedio</span>
+                                    </div>
+                                    <div style="height:6px; background:var(--border); border-radius:3px; overflow:hidden;">
+                                        <div style="width:55%; height:100%; background:var(--cat-robot); border-radius:3px; transition:width 1s ease;"></div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="flex justify-between mb-1">
+                                        <span style="font-size:0.85rem;">Didáctica de la tecnología</span>
+                                        <span style="font-size:0.8rem; color:var(--cat-didac);">En desarrollo</span>
+                                    </div>
+                                    <div style="height:6px; background:var(--border); border-radius:3px; overflow:hidden;">
+                                        <div style="width:40%; height:100%; background:var(--cat-didac); border-radius:3px; transition:width 1s ease;"></div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="flex justify-between mb-1">
+                                        <span style="font-size:0.85rem;">Práctica docente</span>
+                                        <span style="font-size:0.8rem; color:var(--cat-prac);">En desarrollo</span>
+                                    </div>
+                                    <div style="height:6px; background:var(--border); border-radius:3px; overflow:hidden;">
+                                        <div style="width:30%; height:100%; background:var(--cat-prac); border-radius:3px; transition:width 1s ease;"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ESIM ISFDyT -->
+        <section id="esim" class="py-24" style="background: linear-gradient(180deg, transparent, rgba(240,165,0,0.02), transparent);">
+            <div class="max-w-6xl mx-auto px-6">
+                <div class="reveal">
+                    <div class="section-line mb-4"></div>
+                    <h2 class="section-title mb-3">ESIM ISFDyT</h2>
+                    <p class="section-subtitle mb-12">Escuela de Educación Secundaria en Modalidad Técnica — Instituto Superior de Formación Docente y Técnica</p>
                 </div>
                 <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 reveal" style="transition-delay:0.1s">
                     <div style="background:var(--card); border:1px solid var(--border); border-radius:16px; padding:24px; text-align:center; transition:all 0.3s ease;" onmouseover="this.style.borderColor='var(--accent)';this.style.transform='translateY(-4px)'" onmouseout="this.style.borderColor='var(--border)';this.style.transform='translateY(0)'">
@@ -855,7 +854,7 @@
 
     <footer style="border-top:1px solid var(--border); padding:32px 0; position:relative; z-index:10;">
         <div class="max-w-6xl mx-auto px-6 flex flex-col sm:flex-row items-center justify-between gap-4">
-            <p style="font-size:0.85rem; color:var(--fg-muted);">Portfolio Profesorado en Tecnologías</p>
+            <p style="font-size:0.85rem; color:var(--fg-muted);">Portfolio Profesorado en Tecnologías — ESIM ISFDyT</p>
             <p style="font-size:0.8rem; color:var(--fg-muted);">Las actividades se guardan localmente en tu navegador</p>
         </div>
     </footer>
@@ -1025,7 +1024,7 @@
         function getProfile() {
             return JSON.parse(localStorage.getItem('portfolio_profile') || 'null') || {
                 name: 'Tu Nombre',
-                institution: 'Instituto de Formación Docente',
+                institution: 'ESIM ISFDyT',
                 bio: 'Soy estudiante del Profesorado de Educación Secundaria en Tecnologías, con interés en la integración de herramientas digitales en el aula, la programación como recurso pedagógico y el enfoque maker en educación. Este portfolio reúne todas las actividades, producciones y reflexiones del trayecto formativo.',
                 email: 'tu@email.com',
                 linkedin: 'linkedin.com/in/tu-perfil',
