@@ -131,7 +131,7 @@
         }
         .epigraph {
             position: relative;
-            max-width: 720px;
+            max-width: 740px;
             margin: 0 auto;
             text-align: center;
             padding: 0 24px;
@@ -159,21 +159,22 @@
             font-style: italic;
             font-weight: 400;
         }
+        .epigraph-ref {
+            display: inline-block;
+            margin-top: 14px;
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 0.82rem;
+            font-weight: 500;
+            color: var(--warm);
+            letter-spacing: 0.04em;
+            opacity: 0.85;
+        }
         .epigraph-divider {
             width: 48px;
             height: 2px;
             background: linear-gradient(90deg, transparent, var(--warm), transparent);
-            margin: 28px auto 0;
+            margin: 24px auto 0;
             border-radius: 1px;
-        }
-        .epigraph-attr {
-            margin-top: 16px;
-            font-size: 0.8rem;
-            color: var(--fg-muted);
-            opacity: 0.5;
-            letter-spacing: 0.08em;
-            text-transform: uppercase;
-            font-family: 'Space Grotesk', sans-serif;
         }
 
         .stat-card {
@@ -395,9 +396,7 @@
             position: absolute; left: 16px; top: 50%;
             transform: translateY(-50%); color: var(--fg-muted);
         }
-        .search-wrap input {
-            padding-left: 44px;
-        }
+        .search-wrap input { padding-left: 44px; }
 
         .reveal {
             opacity: 0; transform: translateY(30px);
@@ -437,7 +436,6 @@
             50% { transform: translateY(-12px); }
         }
 
-        /* Animación de entrada para la cita */
         @keyframes epigraphFade {
             0% { opacity: 0; transform: translateY(20px); filter: blur(4px); }
             100% { opacity: 1; transform: translateY(0); filter: blur(0); }
@@ -446,7 +444,6 @@
             animation: epigraphFade 1.2s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.3s both;
         }
 
-        /* Resplandor sutil detrás de la cita */
         .epigraph-glow {
             position: absolute;
             top: 50%; left: 50%;
@@ -497,9 +494,9 @@
                 <span class="epigraph-icon" aria-hidden="true">&ldquo;</span>
                 <p class="epigraph-text">
                     &hellip;el proceso de <em>pensamiento</em> envuelto en formular un problema y sus <em>soluciones</em> de manera que las soluciones son representadas de una forma en que pueden ser llevadas a un <em>agente de procesamiento de información</em>.
+                    <span class="epigraph-ref">(Wing, 2006, 2010)</span>
                 </p>
                 <div class="epigraph-divider" aria-hidden="true"></div>
-                <p class="epigraph-attr">Sobre el pensamiento computacional</p>
             </div>
         </section>
 
