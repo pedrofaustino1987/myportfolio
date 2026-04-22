@@ -42,13 +42,11 @@
         }
         h1, h2, h3, h4, h5, h6, .font-display { font-family: 'Space Grotesk', sans-serif; }
 
-        /* Scrollbar personalizado */
         ::-webkit-scrollbar { width: 8px; }
         ::-webkit-scrollbar-track { background: var(--bg); }
         ::-webkit-scrollbar-thumb { background: var(--border); border-radius: 4px; }
         ::-webkit-scrollbar-thumb:hover { background: var(--fg-muted); }
 
-        /* Fondo animado */
         .bg-grid {
             position: fixed; inset: 0; z-index: 0; pointer-events: none;
             background-image:
@@ -64,7 +62,6 @@
             100% { background-position: 0 0, 0 0, 30px 30px, 30px 30px; }
         }
 
-        /* Partículas flotantes */
         .particle {
             position: fixed; border-radius: 50%; pointer-events: none; z-index: 0;
             animation: floatParticle linear infinite;
@@ -77,7 +74,6 @@
             100% { transform: translateY(-10vh) scale(1); opacity: 0; }
         }
 
-        /* Nav */
         .nav-glass {
             background: rgba(13,17,23,0.8);
             backdrop-filter: blur(20px);
@@ -100,7 +96,6 @@
         }
         .nav-link:hover::after, .nav-link.active::after { width: 100%; }
 
-        /* Hero */
         .hero-title {
             font-size: clamp(2.5rem, 6vw, 4.5rem);
             font-weight: 700; line-height: 1.1;
@@ -129,7 +124,58 @@
             50% { opacity: 0.5; transform: scale(0.8); }
         }
 
-        /* Stats */
+        /* Epígrafe / Cita */
+        .epigraph-section {
+            padding: 56px 0 0;
+            position: relative;
+        }
+        .epigraph {
+            position: relative;
+            max-width: 720px;
+            margin: 0 auto;
+            text-align: center;
+            padding: 0 24px;
+        }
+        .epigraph-icon {
+            font-size: 2.8rem;
+            line-height: 1;
+            color: var(--accent);
+            opacity: 0.25;
+            margin-bottom: 16px;
+            display: block;
+            font-family: Georgia, 'Times New Roman', serif;
+        }
+        .epigraph-text {
+            font-family: 'DM Sans', sans-serif;
+            font-size: clamp(1rem, 2.2vw, 1.25rem);
+            font-style: italic;
+            font-weight: 300;
+            line-height: 1.75;
+            color: var(--fg-muted);
+            letter-spacing: 0.01em;
+        }
+        .epigraph-text em {
+            color: var(--accent);
+            font-style: italic;
+            font-weight: 400;
+        }
+        .epigraph-divider {
+            width: 48px;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, var(--warm), transparent);
+            margin: 28px auto 0;
+            border-radius: 1px;
+        }
+        .epigraph-attr {
+            margin-top: 16px;
+            font-size: 0.8rem;
+            color: var(--fg-muted);
+            opacity: 0.5;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            font-family: 'Space Grotesk', sans-serif;
+        }
+
         .stat-card {
             background: var(--card); border: 1px solid var(--border);
             border-radius: 16px; padding: 24px; text-align: center;
@@ -147,7 +193,6 @@
             font-size: 2.5rem; font-weight: 700; color: var(--accent);
         }
 
-        /* Secciones */
         .section-title {
             font-size: clamp(1.8rem, 3.5vw, 2.5rem);
             font-weight: 700; color: var(--fg);
@@ -160,7 +205,6 @@
             background: linear-gradient(90deg, var(--accent), var(--warm));
         }
 
-        /* Filtros / Categorías */
         .filter-btn {
             padding: 8px 18px; border-radius: 999px; font-size: 0.85rem;
             font-weight: 500; border: 1px solid var(--border);
@@ -179,7 +223,6 @@
         }
         .filter-scroll::-webkit-scrollbar { display: none; }
 
-        /* Cards de actividades */
         .activity-card {
             background: var(--card); border: 1px solid var(--border);
             border-radius: 16px; overflow: hidden;
@@ -218,7 +261,6 @@
         .card-action-btn:hover { background: var(--accent); color: var(--bg); }
         .card-action-btn.delete:hover { background: var(--danger); }
 
-        /* Tags */
         .tag {
             display: inline-flex; align-items: center; gap: 4px;
             padding: 3px 10px; border-radius: 6px; font-size: 0.72rem;
@@ -226,7 +268,6 @@
             color: var(--fg-muted); border: 1px solid rgba(255,255,255,0.06);
         }
 
-        /* Modal */
         .modal-overlay {
             position: fixed; inset: 0; z-index: 1000;
             background: rgba(0,0,0,0.7); backdrop-filter: blur(8px);
@@ -246,7 +287,6 @@
         .modal-content::-webkit-scrollbar { width: 6px; }
         .modal-content::-webkit-scrollbar-thumb { background: var(--border); border-radius: 3px; }
 
-        /* Formularios */
         .form-group { margin-bottom: 20px; }
         .form-label {
             display: block; font-size: 0.85rem; font-weight: 600;
@@ -267,7 +307,6 @@
         .form-textarea { resize: vertical; min-height: 120px; }
         .form-select option { background: var(--card); color: var(--fg); }
 
-        /* Botones */
         .btn-primary {
             display: inline-flex; align-items: center; gap: 8px;
             padding: 12px 28px; border-radius: 12px; font-size: 0.95rem;
@@ -293,7 +332,6 @@
             padding: 8px 16px; font-size: 0.85rem; border-radius: 10px;
         }
 
-        /* Toast */
         .toast-container {
             position: fixed; bottom: 24px; right: 24px; z-index: 2000;
             display: flex; flex-direction: column; gap: 8px;
@@ -316,7 +354,6 @@
             to { transform: translateX(100%); opacity: 0; }
         }
 
-        /* Timeline */
         .timeline-item {
             position: relative; padding-left: 36px; padding-bottom: 32px;
         }
@@ -331,13 +368,11 @@
             border: 3px solid var(--accent); background: var(--bg);
         }
 
-        /* Detalle modal */
         .detail-header-img {
             width: 100%; height: 240px; object-fit: cover;
             border-radius: 20px 20px 0 0;
         }
 
-        /* Materia chips con color */
         .cat-info { background: rgba(88,166,255,0.15); color: var(--cat-info); }
         .cat-prog { background: rgba(45,212,168,0.15); color: var(--cat-prog); }
         .cat-robot { background: rgba(240,165,0,0.15); color: var(--cat-robot); }
@@ -347,14 +382,12 @@
         .cat-prac { background: rgba(255,166,87,0.15); color: var(--cat-prac); }
         .cat-pedag { background: rgba(126,231,135,0.15); color: var(--cat-pedag); }
 
-        /* Empty state */
         .empty-state {
             text-align: center; padding: 80px 20px;
             color: var(--fg-muted);
         }
         .empty-state i { font-size: 3rem; margin-bottom: 16px; opacity: 0.3; }
 
-        /* Búsqueda */
         .search-wrap {
             position: relative; max-width: 400px;
         }
@@ -366,14 +399,12 @@
             padding-left: 44px;
         }
 
-        /* Reveal animation */
         .reveal {
             opacity: 0; transform: translateY(30px);
             transition: all 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94);
         }
         .reveal.visible { opacity: 1; transform: translateY(0); }
 
-        /* Mobile nav */
         .mobile-menu-btn {
             display: none; background: none; border: none;
             color: var(--fg); font-size: 1.3rem; cursor: pointer;
@@ -391,10 +422,6 @@
             .stat-number { font-size: 2rem; }
         }
 
-        /* Contador animado */
-        .count-up { transition: all 0.5s ease; }
-
-        /* File drop zone */
         .drop-zone {
             border: 2px dashed var(--border); border-radius: 12px;
             padding: 30px; text-align: center; cursor: pointer;
@@ -405,6 +432,32 @@
         }
         .drop-zone i { font-size: 2rem; color: var(--fg-muted); margin-bottom: 8px; }
 
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-12px); }
+        }
+
+        /* Animación de entrada para la cita */
+        @keyframes epigraphFade {
+            0% { opacity: 0; transform: translateY(20px); filter: blur(4px); }
+            100% { opacity: 1; transform: translateY(0); filter: blur(0); }
+        }
+        .epigraph-animate {
+            animation: epigraphFade 1.2s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.3s both;
+        }
+
+        /* Resplandor sutil detrás de la cita */
+        .epigraph-glow {
+            position: absolute;
+            top: 50%; left: 50%;
+            transform: translate(-50%, -50%);
+            width: 400px; height: 200px;
+            background: radial-gradient(ellipse, var(--accent-dim), transparent 70%);
+            filter: blur(40px);
+            pointer-events: none;
+            z-index: -1;
+        }
+
         @media (prefers-reduced-motion: reduce) {
             *, *::before, *::after {
                 animation-duration: 0.01ms !important;
@@ -414,11 +467,9 @@
     </style>
 </head>
 <body>
-    <!-- Fondo -->
     <div class="bg-grid" aria-hidden="true"></div>
     <div id="particles" aria-hidden="true"></div>
 
-    <!-- Navegación -->
     <nav class="nav-glass fixed top-0 left-0 right-0 z-50" role="navigation" aria-label="Navegación principal">
         <div class="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
             <a href="#inicio" class="font-display font-bold text-lg flex items-center gap-2" style="color:var(--accent)">
@@ -439,8 +490,21 @@
     </nav>
 
     <main class="relative z-10">
+        <!-- EPÍGRAFE / CITA -->
+        <section class="epigraph-section pt-24" aria-label="Cita de apertura">
+            <div class="epigraph epigraph-animate">
+                <div class="epigraph-glow" aria-hidden="true"></div>
+                <span class="epigraph-icon" aria-hidden="true">&ldquo;</span>
+                <p class="epigraph-text">
+                    &hellip;el proceso de <em>pensamiento</em> envuelto en formular un problema y sus <em>soluciones</em> de manera que las soluciones son representadas de una forma en que pueden ser llevadas a un <em>agente de procesamiento de información</em>.
+                </p>
+                <div class="epigraph-divider" aria-hidden="true"></div>
+                <p class="epigraph-attr">Sobre el pensamiento computacional</p>
+            </div>
+        </section>
+
         <!-- HERO -->
-        <section id="inicio" class="min-h-screen flex items-center pt-16">
+        <section id="inicio" class="min-h-screen flex items-center pt-12">
             <div class="max-w-6xl mx-auto px-6 py-20 w-full">
                 <div class="grid lg:grid-cols-2 gap-12 items-center">
                     <div class="reveal">
@@ -465,7 +529,6 @@
                     </div>
                     <div class="reveal" style="transition-delay:0.2s">
                         <div class="relative">
-                            <!-- Visual decorativo -->
                             <div style="background:var(--card); border:1px solid var(--border); border-radius:20px; padding:32px; position:relative; overflow:hidden;">
                                 <div style="position:absolute; top:0; left:0; right:0; height:4px; background:linear-gradient(90deg, var(--accent), var(--warm));"></div>
                                 <div class="flex items-center gap-3 mb-6">
@@ -484,7 +547,6 @@
                                     <div>};</div>
                                 </div>
                             </div>
-                            <!-- Elementos flotantes decorativos -->
                             <div style="position:absolute; top:-20px; right:-20px; width:80px; height:80px; border-radius:16px; background:var(--accent-dim); border:1px solid rgba(45,212,168,0.2); display:flex; align-items:center; justify-content:center; animation: float 4s ease-in-out infinite;">
                                 <i class="fa-solid fa-gear" style="color:var(--accent); font-size:1.5rem;"></i>
                             </div>
@@ -495,7 +557,6 @@
                     </div>
                 </div>
 
-                <!-- Stats -->
                 <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mt-16 reveal" style="transition-delay:0.4s">
                     <div class="stat-card">
                         <div class="stat-number" id="statTotal">0</div>
@@ -516,12 +577,6 @@
                 </div>
             </div>
         </section>
-        <style>
-            @keyframes float {
-                0%, 100% { transform: translateY(0px); }
-                50% { transform: translateY(-12px); }
-            }
-        </style>
 
         <!-- SOBRE MÍ -->
         <section id="sobre-mi" class="py-24">
@@ -624,7 +679,6 @@
                     </div>
                 </div>
 
-                <!-- Búsqueda y filtros -->
                 <div class="reveal mb-8" style="transition-delay:0.1s">
                     <div class="flex flex-col sm:flex-row gap-4 mb-4">
                         <div class="search-wrap flex-1">
@@ -638,17 +692,11 @@
                             <option value="cat">Por materia</option>
                         </select>
                     </div>
-                    <div class="filter-scroll" id="filterContainer">
-                        <!-- Se genera dinámicamente -->
-                    </div>
+                    <div class="filter-scroll" id="filterContainer"></div>
                 </div>
 
-                <!-- Grid de actividades -->
-                <div id="activitiesGrid" class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-                    <!-- Se genera dinámicamente -->
-                </div>
+                <div id="activitiesGrid" class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6"></div>
 
-                <!-- Empty state -->
                 <div id="emptyState" class="empty-state" style="display:none;">
                     <i class="fa-solid fa-folder-open block"></i>
                     <p class="text-lg font-display font-semibold mb-2">Aún no hay actividades</p>
@@ -808,15 +856,10 @@
         </section>
     </main>
 
-    <!-- Footer -->
     <footer style="border-top:1px solid var(--border); padding:32px 0; position:relative; z-index:10;">
         <div class="max-w-6xl mx-auto px-6 flex flex-col sm:flex-row items-center justify-between gap-4">
-            <p style="font-size:0.85rem; color:var(--fg-muted);">
-                Portfolio Profesorado en Tecnologías
-            </p>
-            <p style="font-size:0.8rem; color:var(--fg-muted);">
-                Las actividades se guardan localmente en tu navegador
-            </p>
+            <p style="font-size:0.85rem; color:var(--fg-muted);">Portfolio Profesorado en Tecnologías</p>
+            <p style="font-size:0.8rem; color:var(--fg-muted);">Las actividades se guardan localmente en tu navegador</p>
         </div>
     </footer>
 
@@ -831,12 +874,10 @@
             </div>
             <form id="activityForm" onsubmit="saveActivity(event)" style="padding:28px;">
                 <input type="hidden" id="editId" value="">
-
                 <div class="form-group">
                     <label class="form-label" for="actTitle">Titulo de la actividad</label>
                     <input type="text" class="form-input" id="actTitle" placeholder="Ej: Secuencia didáctica sobre algoritmos" required>
                 </div>
-
                 <div class="grid sm:grid-cols-2 gap-4">
                     <div class="form-group">
                         <label class="form-label" for="actCategory">Materia / Espacio curricular</label>
@@ -857,7 +898,6 @@
                         <input type="date" class="form-input" id="actDate" required>
                     </div>
                 </div>
-
                 <div class="form-group">
                     <label class="form-label" for="actType">Tipo de actividad</label>
                     <select class="form-select" id="actType" required>
@@ -873,22 +913,18 @@
                         <option value="otro">Otro</option>
                     </select>
                 </div>
-
                 <div class="form-group">
                     <label class="form-label" for="actDesc">Descripcion</label>
                     <textarea class="form-textarea" id="actDesc" placeholder="Describe la actividad, objetivos, herramientas utilizadas, conclusiones..." required></textarea>
                 </div>
-
                 <div class="form-group">
                     <label class="form-label" for="actTags">Etiquetas (separadas por coma)</label>
                     <input type="text" class="form-input" id="actTags" placeholder="Ej: algoritmos, scratch, secundaria, evaluación">
                 </div>
-
                 <div class="form-group">
                     <label class="form-label">Imagen representativa (URL o dejar vacío para imagen automática)</label>
                     <input type="text" class="form-input" id="actImage" placeholder="https://...">
                 </div>
-
                 <div class="form-group">
                     <label class="form-label">Archivo adjunto (opcional)</label>
                     <div class="drop-zone" id="dropZone" onclick="document.getElementById('fileInput').click()">
@@ -898,7 +934,6 @@
                     </div>
                     <input type="file" id="fileInput" style="display:none" onchange="handleFile(this)">
                 </div>
-
                 <div class="flex gap-3 justify-end mt-6">
                     <button type="button" class="btn-secondary" onclick="closeModal()">Cancelar</button>
                     <button type="submit" class="btn-primary" id="submitBtn">
@@ -911,9 +946,7 @@
 
     <!-- MODAL: Ver detalle -->
     <div class="modal-overlay" id="detailModal" role="dialog" aria-modal="true" aria-label="Detalle de actividad">
-        <div class="modal-content" id="detailContent">
-            <!-- Se llena dinámicamente -->
-        </div>
+        <div class="modal-content" id="detailContent"></div>
     </div>
 
     <!-- MODAL: Editar perfil -->
@@ -962,15 +995,9 @@
         </div>
     </div>
 
-    <!-- Toast container -->
     <div class="toast-container" id="toastContainer"></div>
 
     <script>
-        // =============================================
-        // DATOS Y CONFIGURACIÓN
-        // =============================================
-
-        // Categorías con sus metadatos
         const CATEGORIES = {
             info:   { label: 'Informática',                   cssClass: 'cat-info',   icon: 'fa-laptop-code' },
             prog:   { label: 'Programación',                  cssClass: 'cat-prog',   icon: 'fa-code' },
@@ -994,14 +1021,9 @@
             otro: 'Otro'
         };
 
-        // Estado de la app
         let activities = JSON.parse(localStorage.getItem('portfolio_activities') || '[]');
         let activeFilter = 'all';
         let currentFile = null;
-
-        // =============================================
-        // LOCALSTORAGE - Perfil
-        // =============================================
 
         function getProfile() {
             return JSON.parse(localStorage.getItem('portfolio_profile') || 'null') || {
@@ -1061,10 +1083,6 @@
             showToast('Perfil actualizado correctamente', 'success');
         }
 
-        // =============================================
-        // ACTIVIDADES - CRUD
-        // =============================================
-
         function saveActivities() {
             localStorage.setItem('portfolio_activities', JSON.stringify(activities));
         }
@@ -1078,7 +1096,6 @@
             document.getElementById('actDate').value = new Date().toISOString().split('T')[0];
 
             if (editId) {
-                // Modo edición
                 const act = activities.find(a => a.id === editId);
                 if (!act) return;
                 document.getElementById('modalTitle').textContent = 'Editar actividad';
@@ -1119,7 +1136,6 @@
             const description = document.getElementById('actDesc').value.trim();
             let image = document.getElementById('actImage').value.trim();
 
-            // Si no hay imagen, generar una con picsum basada en el título
             if (!image) {
                 const seed = title.replace(/\s+/g, '-').substring(0, 30) + '-' + Date.now();
                 image = `https://picsum.photos/seed/${seed}/600/400.jpg`;
@@ -1133,9 +1149,7 @@
 
             if (editId) {
                 const idx = activities.findIndex(a => a.id === editId);
-                if (idx !== -1) {
-                    activities[idx] = { ...activities[idx], ...activityData };
-                }
+                if (idx !== -1) activities[idx] = { ...activities[idx], ...activityData };
                 showToast('Actividad actualizada', 'success');
             } else {
                 activityData.id = Date.now().toString(36) + Math.random().toString(36).substring(2, 7);
@@ -1151,11 +1165,9 @@
         }
 
         function deleteActivity(id) {
-            // Mostrar confirmación inline en lugar de confirm()
             const card = document.querySelector(`[data-id="${id}"]`);
             if (!card) return;
 
-            // Si ya hay confirmación visible, eliminar directamente
             if (card.querySelector('.delete-confirm')) {
                 activities = activities.filter(a => a.id !== id);
                 saveActivities();
@@ -1187,7 +1199,6 @@
             }
         }
 
-        // Drag & drop
         const dropZone = document.getElementById('dropZone');
         dropZone.addEventListener('dragover', (e) => { e.preventDefault(); dropZone.classList.add('dragover'); });
         dropZone.addEventListener('dragleave', () => { dropZone.classList.remove('dragover'); });
@@ -1201,15 +1212,9 @@
             }
         });
 
-        // =============================================
-        // RENDERIZADO
-        // =============================================
-
         function renderFilters() {
             const container = document.getElementById('filterContainer');
-            // Botón "Todas"
             let html = `<button class="filter-btn ${activeFilter === 'all' ? 'active' : ''}" onclick="setFilter('all')">Todas</button>`;
-            // Un botón por categoría que tenga actividades
             const usedCats = [...new Set(activities.map(a => a.category))];
             usedCats.forEach(catKey => {
                 const cat = CATEGORIES[catKey];
@@ -1244,7 +1249,6 @@
                 return matchCat && matchSearch;
             });
 
-            // Ordenar
             switch (sort) {
                 case 'newest': filtered.sort((a, b) => new Date(b.date) - new Date(a.date)); break;
                 case 'oldest': filtered.sort((a, b) => new Date(a.date) - new Date(b.date)); break;
@@ -1307,11 +1311,8 @@
                 </article>`;
             }).join('');
 
-            // Activar reveal en las nuevas cards
             requestAnimationFrame(() => {
-                grid.querySelectorAll('.reveal').forEach(el => {
-                    observeReveal(el);
-                });
+                grid.querySelectorAll('.reveal').forEach(el => observeReveal(el));
             });
         }
 
@@ -1359,10 +1360,6 @@
             document.body.style.overflow = '';
         }
 
-        // =============================================
-        // ESTADÍSTICAS
-        // =============================================
-
         function updateStats() {
             const total = activities.length;
             const cats = new Set(activities.map(a => a.category)).size;
@@ -1394,10 +1391,6 @@
             requestAnimationFrame(tick);
         }
 
-        // =============================================
-        // UTILIDADES
-        // =============================================
-
         function formatDate(dateStr) {
             const d = new Date(dateStr + 'T12:00:00');
             return d.toLocaleDateString('es-AR', { day: 'numeric', month: 'short', year: 'numeric' });
@@ -1417,35 +1410,27 @@
             setTimeout(() => toast.remove(), 3200);
         }
 
-        // =============================================
-        // NAVEGACIÓN
-        // =============================================
-
         function toggleMobileMenu() {
             document.getElementById('navLinks').classList.toggle('open');
         }
 
-        // Cerrar menú al hacer clic en un link (mobile)
         document.querySelectorAll('.nav-link').forEach(link => {
             link.addEventListener('click', () => {
                 document.getElementById('navLinks').classList.remove('open');
             });
         });
 
-        // Scroll spy para nav activo
         const sections = document.querySelectorAll('section[id]');
         const navLinks = document.querySelectorAll('.nav-link');
         const nav = document.querySelector('.nav-glass');
 
         window.addEventListener('scroll', () => {
-            // Nav glass effect
             if (window.scrollY > 50) {
                 nav.classList.add('scrolled');
             } else {
                 nav.classList.remove('scrolled');
             }
 
-            // Scroll spy
             let currentSection = 'inicio';
             sections.forEach(section => {
                 const top = section.offsetTop - 100;
@@ -1457,10 +1442,6 @@
                 link.classList.toggle('active', link.dataset.section === currentSection);
             });
         });
-
-        // =============================================
-        // SCROLL REVEAL (IntersectionObserver)
-        // =============================================
 
         const revealObserver = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
@@ -1475,10 +1456,6 @@
         }
 
         document.querySelectorAll('.reveal').forEach(el => observeReveal(el));
-
-        // =============================================
-        // CERRAR MODALES CON ESC Y CLICK FUERA
-        // =============================================
 
         document.addEventListener('keydown', (e) => {
             if (e.key === 'Escape') {
@@ -1497,10 +1474,6 @@
         document.getElementById('profileModal').addEventListener('click', (e) => {
             if (e.target === e.currentTarget) closeProfileModal();
         });
-
-        // =============================================
-        // PARTÍCULAS FLOTANTES
-        // =============================================
 
         function createParticles() {
             const container = document.getElementById('particles');
@@ -1521,10 +1494,6 @@
                 container.appendChild(p);
             }
         }
-
-        // =============================================
-        // DATOS DE EJEMPLO (solo si no hay actividades)
-        // =============================================
 
         function loadSampleData() {
             if (activities.length > 0) return;
@@ -1607,10 +1576,6 @@
             activities = samples;
             saveActivities();
         }
-
-        // =============================================
-        // INICIALIZACIÓN
-        // =============================================
 
         function init() {
             loadSampleData();
